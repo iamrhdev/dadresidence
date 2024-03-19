@@ -1,0 +1,60 @@
+{% extends 'main.html'%} {%block content%}
+<section class="hero-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="hero-text">
+          <h1>Sona A Luxury Hotel</h1>
+          <p>
+            Here are the best hotel booking sites, including recommendations for
+            international travel and for finding low-priced hotel rooms.
+          </p>
+          <a href="#" class="primary-btn">Discover Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slider owl-carousel">
+    {% for image in carousel_images %}
+    <div class="hs-item set-bg" data-setbg="{{ image.image.url }}">
+      {{ image.title }}
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- About us -->
+<section class="aboutus-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="about-text">
+          <div class="section-title">
+            <span>About Us</span>
+            <h2>{{about_us.title}}</h2>
+          </div>
+          <p class="f-para">{{about_us.description}}</p>
+          <!-- <p class="s-para">
+            So when it comes to booking the perfect hotel, vacation rental,
+            resort, apartment, guest house, or tree house, we’ve got you
+            covered.
+          </p> -->
+          <a href="#" class="primary-btn about-btn">Read More</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="about-pic">
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="img/about/about-1.jpg" alt="" />
+            </div>
+            <div class="col-sm-6">
+              <img src="img/about/about-2.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}
