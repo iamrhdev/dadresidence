@@ -57,3 +57,9 @@ class ExtraService(models.Model):
     service_image = models.ImageField(upload_to='img/%y/%m')
     service_title = models.CharField(max_length=55)
     service_description = models.CharField(null=True,blank=True)
+    
+class DadResidenceDetail(models.Model):
+    logo = models.ImageField(upload_to='img/%y/m')
+    email = models.CharField()    
+    phone_number = models.CharField()    
+    address = models.CharField()    
