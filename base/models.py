@@ -12,10 +12,14 @@ class CarouselImage(models.Model):
 class About(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
-    descriptive_info = models.CharField(blank=True)
+    descriptive_info = models.TextField(blank=True)
+    image1 = models.ImageField(upload_to='img/%y/%m', null=True, blank=True)
+    image2 = models.ImageField(upload_to='img/%y/%m', null=True, blank=True)
+    image3 = models.ImageField(upload_to='img/%y/%m', null=True, blank=True)
 
     def __str__(self):
         return self.title
+
     
 class OurService(models.Model):
     title = models.CharField(max_length=55)
@@ -48,3 +52,8 @@ class AboutVideo(models.Model):
 
 class Benefit(models.Model):
     title = models.CharField()
+    
+class ExtraService(models.Model):
+    service_image = models.ImageField(upload_to='img/%y/%m')
+    service_title = models.CharField(max_length=55)
+    service_description = models.CharField(null=True,blank=True)

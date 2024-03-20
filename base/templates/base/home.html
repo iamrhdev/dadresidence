@@ -45,10 +45,38 @@
         <div class="about-pic">
           <div class="row">
             <div class="col-sm-6">
-              <img src="img/about/about-1.jpg" alt="" />
+              <img
+                src="{{ about_us.image3.url }}"
+                alt=""
+                class="portrait-img"
+                style="
+                  transition: transform 0.3s ease-in-out,
+                    box-shadow 0.3s ease-in-out;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                "
+                onmouseover="this.style.transform = 'scale(1.1)';
+                            this.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';"
+                onmouseout="this.style.transform = 'scale(1)';
+                            this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';"
+              />
             </div>
             <div class="col-sm-6">
-              <img src="img/about/about-2.jpg" alt="" />
+              <img
+                src="{{ about_us.image1.url }}"
+                alt=""
+                class="portrait-img"
+                style="
+                  transition: transform 0.3s ease-in-out,
+                    box-shadow 0.3s ease-in-out;
+                  border-radius: 10px;
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                "
+                onmouseover="this.style.transform = 'scale(1.1)';
+                            this.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';"
+                onmouseout="this.style.transform = 'scale(1)';
+                            this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';"
+              />
             </div>
           </div>
         </div>
