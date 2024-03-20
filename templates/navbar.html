@@ -1,4 +1,4 @@
-<nav>
+<nav id="sticky-nav">
   <div class="menu-item">
     <div class="container">
       <div class="row">
@@ -13,11 +13,11 @@
           <div class="nav-menu">
             <nav class="mainmenu">
               <ul>
-                <li class="active"><a href="./index.html">Home</a></li>
-                <li><a href="./rooms.html">Rooms</a></li>
-                <li><a href="./about-us.html">About Us</a></li>
-                <li><a href="./blog.html">News</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li class="active"><a href="{% url 'home-page' %}">Home</a></li>
+                <li><a href="">Rooms</a></li>
+                <li><a href="{% url 'about-page' %}">About Us</a></li>
+                <li><a href="">News</a></li>
+                <li><a href="">Contact</a></li>
               </ul>
             </nav>
           </div>
