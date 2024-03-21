@@ -32,3 +32,8 @@ def navbar(request):
     about = About.objects.get()
     context = {'details':details_residence,'about_us':about}
     return render(request, 'navbar.html', context)
+
+def contact(request):
+    details_residence = DadResidenceDetail.objects.get()
+    context = {'details': details_residence}
+    return render(request,'base/contact.html',context)

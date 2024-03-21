@@ -105,3 +105,26 @@
 	--------------------*/
   $("select").niceSelect();
 })(jQuery);
+
+window.addEventListener("scroll", function () {
+  var nav = document.getElementById("sticky-nav");
+  var scrolled = window.scrollY > 0 && window.location.pathname === "/";
+  if (scrolled) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
+});
+function setStickyNavBackground() {
+  var nav = document.getElementById("sticky-nav");
+  var isHomePage = window.location.pathname === "/";
+  if (isHomePage) {
+    nav.classList.add("transparent");
+  } else {
+    nav.classList.remove("transparent");
+  }
+}
+
+setStickyNavBackground();
+
+window.addEventListener("scroll", setStickyNavBackground);

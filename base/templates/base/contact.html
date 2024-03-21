@@ -1,0 +1,46 @@
+{%extends 'main.html'%} {%block content%}
+<!-- Contact Section Begin -->
+<section class="contact-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="contact-text">
+          <h2>Contact Info</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <table>
+            <tbody>
+              <tr>
+                <td class="c-o">Address:</td>
+                <td>{{details.address}}</td>
+              </tr>
+              <tr>
+                <td class="c-o">Phone:</td>
+                <td>{{details.phone_number}}</td>
+              </tr>
+              <tr>
+                <td class="c-o">Email:</td>
+                <td>{{details.email}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-7 offset-lg-1 map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12446.263191813707!2d48.7669831!3d38.750725!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4022ff56eaef846b%3A0xc42e49751b99dadc!2sDAD%20residence!5e0!3m2!1sen!2saz!4v1711019265348!5m2!1sen!2saz"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+{%endblock%}
+<!-- Contact Section End -->
