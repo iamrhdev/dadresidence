@@ -37,7 +37,7 @@ body {
   height: 100%;
   font-family: "Cabin", sans-serif;
   -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+
   background-color: #fff;
 }
 h1,
@@ -444,9 +444,11 @@ ol {
 }
 
 .logo-residence {
-  max-height: 100%;
+  /* max-height: 100%; */
   position: relative;
-  top: -100px;
+  height: 246px !important;
+  top: -80px !important;
+  left: -21px !important;
 }
 
 .menu-item .logo a {
@@ -848,82 +850,7 @@ ol {
 .hp-room-items .hp-room-item .hr-text .primary-btn:after {
   background: #ffffff;
 }
-/*---------------------
-  Testimonial Slider
------------------------*/
 
-.testimonial-section {
-  background: #f9f9f9;
-}
-.testimonial-section .section-title {
-  margin-bottom: 30px;
-}
-.testimonial-slider.owl-carousel .owl-item img {
-  width: auto;
-  margin: 0 auto;
-}
-.testimonial-slider.owl-carousel .owl-nav button {
-  height: 44px;
-  width: 44px;
-  border: 1px solid #ebebeb;
-  font-size: 24px;
-  color: #707079;
-  background: #ffffff;
-  line-height: 48px;
-  text-align: center;
-  border-radius: 50%;
-  position: absolute;
-  left: -190px;
-  top: 50%;
-  -webkit-transform: translateY(-6px);
-  -ms-transform: translateY(-6px);
-  transform: translateY(-6px);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.testimonial-slider.owl-carousel .owl-nav button:hover {
-  border-color: #19191a;
-  color: #19191a;
-}
-.testimonial-slider.owl-carousel .owl-nav button.owl-next {
-  left: auto;
-  right: -190px;
-}
-.testimonial-slider .ts-item {
-  text-align: center;
-}
-.testimonial-slider .ts-item p {
-  font-size: 20px;
-  color: #707079;
-  line-height: 30px;
-  margin-bottom: 50px;
-}
-.testimonial-slider .ts-item .ti-author {
-  margin-bottom: 60px;
-}
-.testimonial-slider .ts-item .ti-author .rating {
-  display: inline-block;
-}
-.testimonial-slider .ts-item .ti-author .rating i {
-  color: #f5b917;
-  font-size: 16px;
-}
-.testimonial-slider .ts-item .ti-author h5 {
-  font-size: 20px;
-  color: #19191a;
-  display: inline-block;
-}
-/*---------------------
-  Blog and Event
------------------------*/
-
-.blog-section {
-  padding-bottom: 70px;
-}
-.blog-section .section-title {
-  margin-bottom: 36px;
-}
 /*---------------------
   Footer Section
 -----------------------*/

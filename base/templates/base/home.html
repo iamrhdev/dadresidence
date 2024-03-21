@@ -121,71 +121,40 @@
 </section>
 <!-- Services Section End -->
 
-<section class="hp-room-section">
-  <div class="container-fluid">
-    <div class="hp-room-items">
-      <div class="row">
-        {% for room in room %}
-        <div class="col-lg-4 col-md-6">
-          <div
-            class="hp-room-item set-bg"
-            style="background-image: url('{{ room.room_image.url }}');"
-          >
-            <div class="hr-text">
-              <h3>{{ room.name }}</h3>
-              <h2>{{ room.price }}<span>/Pernight</span></h2>
-              <table>
-                <tbody>
-                  <tr>
-                    <td class="r-o">Size:</td>
-                    <td>{{ room.size }}</td>
-                  </tr>
-                  <tr>
-                    <td class="r-o">Capacity:</td>
-                    <td>Max person {{ room.capacity }}</td>
-                  </tr>
-                  <tr>
-                    <td class="r-o">Bed:</td>
-                    <td>{{ room.bed_type }}</td>
-                  </tr>
-                  <tr>
-                    <td class="r-o">Services:</td>
-                    <td>{{ room.services }}</td>
-                  </tr>
-                </tbody>
-              </table>
-              <a href="#" class="primary-btn">More Details</a>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Footer Section Begin -->
 <footer class="footer-section">
   <div class="container">
     <div class="footer-text">
-      <div class="row">
+      <div class="row" style="justify-content: space-evenly">
         <div class="col-lg-4">
           <div class="ft-about">
             <div class="logo">
               <a href="#">
-                <img src="img/footer-logo.png" alt="" />
+                <!-- <img src="{{details.logo.url}}" alt="" /> -->
               </a>
             </div>
-            <p>
-              We inspire and reach millions of travelers<br />
-              across 90 local websites
-            </p>
             <div class="fa-social">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-tripadvisor"></i></a>
-              <a href="#"><i class="fa fa-instagram"></i></a>
-              <a href="#"><i class="fa fa-youtube-play"></i></a>
+              <a href="https://www.facebook.com/dadhouse.az/" target="_blank">
+                <i class="fa fa-facebook"></i>
+              </a>
+              <a
+                href="https://www.tripadvisor.com/Restaurant_Review-g3735742-d23224673-Reviews-DAD_House-Lankaran_Lankaran_Region.html"
+                target="_blank"
+              >
+                <i class="fa fa-tripadvisor"></i>
+              </a>
+              <a
+                href="https://www.instagram.com/dadresidence.az/?hl=en"
+                target="_blank"
+              >
+                <i class="fa fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@dadresidence2855"
+                target="_blank"
+              >
+                <i class="fa fa-youtube-play"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -193,20 +162,10 @@
           <div class="ft-contact">
             <h6>Contact Us</h6>
             <ul>
-              <li>(12) 345 67890</li>
-              <li>info.colorlib@gmail.com</li>
-              <li>856 Cordia Extension Apt. 356, Lake, United State</li>
+              <li><i class="fa fa-phone"></i> {{details.phone_number}}</li>
+              <li><i class="fa fa-envelope"></i> {{details.email}}</li>
+              <li><i class="fa fa-map-marker"></i> {{details.address}}</li>
             </ul>
-          </div>
-        </div>
-        <div class="col-lg-3 offset-lg-1">
-          <div class="ft-newslatter">
-            <h6>New latest</h6>
-            <p>Get the latest updates and offers.</p>
-            <form action="#" class="fn-form">
-              <input type="text" placeholder="Email" />
-              <button type="submit"><i class="fa fa-send"></i></button>
-            </form>
           </div>
         </div>
       </div>
@@ -218,23 +177,17 @@
         <div class="col-lg-7">
           <ul>
             <li><a href="#">Contact</a></li>
-            <li><a href="#">Terms of use</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Environmental Policy</a></li>
+            <li><a href="#">FAQ</a></li>
           </ul>
         </div>
         <div class="col-lg-5">
           <div class="co-text">
             <p>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-              Copyright &copy;
+              &copy; DAD Residence
               <script>
                 document.write(new Date().getFullYear());
               </script>
-              All rights reserved | This template is made with
-              <i class="fa fa-heart" aria-hidden="true"></i> by
-              <a href="https://colorlib.com" target="_blank">Colorlib</a>
-              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              All rights reserved
             </p>
           </div>
         </div>

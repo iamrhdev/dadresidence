@@ -1,3 +1,11 @@
+<style>
+  .phone-icon:hover {
+    color: rgb(91, 40, 9);
+  }
+  .email-icon:hover {
+    color: rgb(91, 40, 9);
+  }
+</style>
 <nav id="sticky-nav">
   <div class="top-nav">
     <div class="container">
@@ -6,12 +14,12 @@
           <ul class="tn-left">
             <li style="color: black">
               <a href="tel:{{ details.phone_number }}" style="color: black">
-                <i style="color: rgb(91, 40, 9)" class="fa fa-phone"></i>
+                <i class="fa fa-phone phone-icon" style="color: #dfa974"></i>
               </a>
             </li>
             <li>
               <a style="color: black" href="mailto:{{ details.email }}">
-                <i style="color: rgb(91, 40, 9)" class="fa fa-envelope"></i>
+                <i class="fa fa-envelope email-icon" style="color: #dfa974"></i>
               </a>
             </li>
           </ul>
@@ -19,10 +27,19 @@
         <div class="col-lg-6">
           <div class="tn-right">
             <div class="top-social">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-tripadvisor"></i></a>
-              <a href="#"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.facebook.com/dadhouse.az/" target="_blank"
+                ><i class="fa fa-facebook"></i
+              ></a>
+              <a
+                href="https://www.tripadvisor.com/Restaurant_Review-g3735742-d23224673-Reviews-DAD_House-Lankaran_Lankaran_Region.html"
+                target="_blank"
+                ><i class="fa fa-tripadvisor"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/dadresidence.az/?hl=en"
+                target="_blank"
+                ><i class="fa fa-instagram"></i
+              ></a>
             </div>
             <a href="#" class="bk-btn">Booking Now</a>
             <div class="language-option">
@@ -49,7 +66,7 @@
               <img
                 class="logo-residence"
                 style="height: 100%"
-                src="{{details_residence.logo.url}}"
+                src="{{details.logo.url}}"
                 alt=""
               />
             </a>
