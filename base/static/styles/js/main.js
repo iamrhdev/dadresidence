@@ -116,12 +116,18 @@ window.addEventListener("scroll", function () {
   }
 });
 window.addEventListener("scroll", function () {
-  var topNav = document.getElementsByClassName("top-nav")[0]; // Get the first element with the class "top-nav"
-  var scrolled = window.scrollY > 0; // Check if the window has been scrolled vertically
-  if (scrolled) {
-    topNav.classList.add("scrolled"); // Add the class "scrolled" to the topNav element
+  var topNav = document.querySelector(".top-nav");
+  var scrolled = window.scrollY > 0;
+  var currentUrl = window.location.pathname;
+
+  if (currentUrl === "/") {
+    if (scrolled) {
+      topNav.classList.add("scrolled");
+    } else {
+      topNav.classList.remove("scrolled");
+    }
   } else {
-    topNav.classList.remove("scrolled"); // Remove the class "scrolled" from the topNav element
+    topNav.style.opacity = "1";
   }
 });
 
@@ -134,7 +140,18 @@ function setStickyNavBackground() {
     nav.classList.remove("transparent");
   }
 }
+function setWhiteNavBackground() {
+  var nav = document.getElementById("sticky-nav");
+  var isHomePage = window.location.pathname === "/";
+  if (!isHomePage) {
+    nav.classList.add("nothome");
+  } else {
+    nav.classList.remove("nothome");
+  }
+}
 
 setStickyNavBackground();
+setWhiteNavBackground();
 
-window.addEventListener("scroll", setStickyNavBackground);
+// window.addEventListener("scroll", setStickyNavBackground);
+// window.addEventListener("scroll", setWhiteNavBackground);

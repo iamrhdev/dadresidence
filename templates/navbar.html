@@ -18,7 +18,7 @@
             </ul>
           </div>
         </div>
-        <a href="#" class="bk-btn">Booking Now</a>
+      
       </div>
       <nav class="mainmenu mobile-menu">
         <ul>
@@ -61,12 +61,34 @@
         <div class="col-lg-6">
           <div class="tn-right">
             <div class="top-social">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-tripadvisor"></i></a>
-              <a href="#"><i class="fa fa-instagram"></i></a>
+              <div class="fa-social">
+                <a
+                  href="https://www.facebook.com/dadhouse.az/"
+                  target="_blank"
+                >
+                  <i style="color: #dfa974;;" class="fa fa-facebook"></i>
+                </a>
+                <a
+                  href="https://www.tripadvisor.com/Restaurant_Review-g3735742-d23224673-Reviews-DAD_House-Lankaran_Lankaran_Region.html"
+                  target="_blank"
+                >
+                  <i style="color: #dfa974;;" class="fa fa-tripadvisor"></i>
+                </a>
+                <a
+                  href="https://www.instagram.com/dadresidence.az/?hl=en"
+                  target="_blank"
+                >
+                  <i style="color: #dfa974;;" class="fa fa-instagram"></i>
+                </a>
+                <a
+                  href="https://www.youtube.com/@dadresidence2855"
+                  target="_blank"
+                >
+                  <i style="color: #dfa974;;" class="fa fa-youtube-play"></i>
+                </a>
+              </div>
             </div>
-            <a href="#" class="bk-btn">Booking Now</a>
+
             <div class="language-option">
               <img src="img/flag.jpg" alt="" />
               <span>EN <i class="fa fa-angle-down"></i></span>
@@ -85,18 +107,22 @@
   <div  class="menu-item">
     <div class="container">
       <div class="row">
-         <div class="col-lg-2">
+        <div class="col-lg-2">
+          {% if request.path != '/' %}
           <div class="logo">
-            <a href="{%url 'home-page'%}">
-              <img
-                class="logo-residence"
-                style="height: 100%"
-                src="{{details.logo.url}}"
-                alt=""
-              />
-            </a>
+              <a href="{% url 'home-page' %}">
+                  <img class="logo-residence-dark" style="height: 100%" src="{{ details.logo_dark.url }}" alt="" />
+              </a>
           </div>
-        </div> 
+          {% else %}
+          <div class="logo">
+              <a href="{% url 'home-page' %}">
+                  <img class="logo-residence" style="height: 100%" src="{{ details.logo.url }}" alt="" />
+              </a>
+          </div>
+          {% endif %}
+      </div>
+      
         <div class="col-lg-10">
           <div class="nav-menu">
               <nav class="mainmenu">
