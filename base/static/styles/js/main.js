@@ -115,6 +115,16 @@ window.addEventListener("scroll", function () {
     nav.classList.remove("scrolled");
   }
 });
+window.addEventListener("scroll", function () {
+  var topNav = document.getElementsByClassName("top-nav")[0]; // Get the first element with the class "top-nav"
+  var scrolled = window.scrollY > 0; // Check if the window has been scrolled vertically
+  if (scrolled) {
+    topNav.classList.add("scrolled"); // Add the class "scrolled" to the topNav element
+  } else {
+    topNav.classList.remove("scrolled"); // Remove the class "scrolled" from the topNav element
+  }
+});
+
 function setStickyNavBackground() {
   var nav = document.getElementById("sticky-nav");
   var isHomePage = window.location.pathname === "/";

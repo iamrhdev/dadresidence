@@ -65,6 +65,82 @@
   <body>
     <header>{% include 'navbar.html' %}</header>
     {% block content %} {% endblock %}
+    <footer class="footer-section">
+      <div class="container">
+        <div class="footer-text">
+          <div class="row" style="justify-content: space-evenly">
+            <div class="col-lg-4">
+              <div class="ft-about">
+                <div class="logo">
+                  <a href="#">
+                    <!-- <img src="{{details.logo.url}}" alt="" /> -->
+                  </a>
+                </div>
+                <div class="fa-social">
+                  <a
+                    href="https://www.facebook.com/dadhouse.az/"
+                    target="_blank"
+                  >
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a
+                    href="https://www.tripadvisor.com/Restaurant_Review-g3735742-d23224673-Reviews-DAD_House-Lankaran_Lankaran_Region.html"
+                    target="_blank"
+                  >
+                    <i class="fa fa-tripadvisor"></i>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/dadresidence.az/?hl=en"
+                    target="_blank"
+                  >
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@dadresidence2855"
+                    target="_blank"
+                  >
+                    <i class="fa fa-youtube-play"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+              <div class="ft-contact">
+                <h6>Contact Us</h6>
+                <ul>
+                  <li><i class="fa fa-phone"></i> {{details.phone_number}}</li>
+                  <li><i class="fa fa-envelope"></i> {{details.email}}</li>
+                  <li><i class="fa fa-map-marker"></i> {{details.address}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-option">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <ul>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-5">
+              <div class="co-text">
+                <p>
+                  &copy; DAD Residence
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  All rights reserved
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <script src="{% static 'styles/js/jquery-3.3.1.min.js' %}"></script>
     <script src="{% static 'styles/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'styles/js/jquery.magnific-popup.min.js' %}"></script>

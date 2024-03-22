@@ -59,7 +59,8 @@ class ExtraService(models.Model):
     service_description = models.CharField(null=True,blank=True)
     
 class DadResidenceDetail(models.Model):
-    logo = models.ImageField(upload_to='img/%y/m')
+    logo = models.ImageField(upload_to='img/%y/%m')
+    logo_dark = models.ImageField(upload_to='img/%y/%m', blank=True)
     email = models.CharField()    
     phone_number = models.CharField()    
     address = models.CharField()    

@@ -24,7 +24,8 @@ def about(request):
 
 def room(request):
     room = Room.objects.first()
-    context = {'room':room}
+    details_residence = DadResidenceDetail.objects.get()
+    context = {'room':room,'details':details_residence}
     return render(request, 'base/room.html', context)
 
 def navbar(request):
