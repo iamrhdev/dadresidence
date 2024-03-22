@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import CarouselImage,About,OurService,Room,AboutVideo,Benefit,ExtraService,DadResidenceDetail
+from .models import CarouselImage,About,OurService,Room,AboutVideo,Benefit,ExtraService,DadResidenceDetail,GalleryImage
 
 # Create your views here.
 
@@ -23,7 +23,7 @@ def about(request):
     return render(request,'base/about.html',context)
 
 def room(request):
-    room = Room.objects.first()
+    room = GalleryImage.objects.all()
     details_residence = DadResidenceDetail.objects.get()
     context = {'room':room,'details':details_residence}
     return render(request, 'base/room.html', context)

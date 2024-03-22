@@ -37,10 +37,9 @@ class Room(models.Model):
     services = models.CharField(max_length=255)
     price = models.CharField(max_length=20)
 
-class RoomImage(models.Model):
-    room = models.ForeignKey(Room, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(upload_to='img/%Y/%m')
-
+class GalleryImage(models.Model):
+    image = models.ImageField(upload_to='img/%y/%m')
+    image_name = models.CharField(max_length=155)
 
 class AboutVideo(models.Model):
     youtube_url = models.CharField()
@@ -48,7 +47,6 @@ class AboutVideo(models.Model):
     description = models.CharField(max_length=1000)
     video_bg_image = models.ImageField(upload_to='img/%y/%m')
     play_icon = models.ImageField(upload_to='img/%y/%m')
-
 
 class Benefit(models.Model):
     title = models.CharField()

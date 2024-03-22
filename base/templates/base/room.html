@@ -12,18 +12,18 @@
     </div>
     <div class="row">
       <!-- Display all gallery images in a grid layout -->
-      {% for image in room.images.all %}
+      {% for image in room %}
       <div class="col-lg-4 col-md-6">
         <div class="gallery-item">
           <a
             data-fancybox="gallery"
             data-src="{{ image.image.url }}"
-            data-caption="{{ room.room_name }}"
+            data-caption="{{ image.image_name }}"
           >
             <img
               class="gallery-image"
               src="{{ image.image.url }}"
-              alt="{{ room.room_name }}"
+              alt="{{ image.image_name }}"
             />
           </a>
         </div>
