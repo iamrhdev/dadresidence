@@ -1,5 +1,4 @@
 {% extends 'main.html' %} {% block content %}
-
 <!-- Gallery Section Begin -->
 <section class="gallery-section spad">
   <div class="container">
@@ -12,44 +11,35 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6">
-        <!-- Main gallery item -->
-        <div
-          class="gallery-item set-bg"
-          data-setbg="{{ room.images.first.image.url }}"
-        >
-          <div class="gi-text">
-            <h3>{{ room.room_name }}</h3>
-          </div>
-        </div>
-        <div class="row">
-          <!-- Additional gallery items -->
-          {% for image in room.images.all %}
-          <div class="col-sm-6">
-            <div class="gallery-item set-bg" data-setbg="{{ image.image.url }}">
-              <div class="gi-text">
-                <h3>{{ room.room_name }}</h3>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
+      <!-- Display all gallery images in a grid layout -->
+      {% for image in room.images.all %}
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-item">
+          <a
+            data-fancybox="gallery"
+            data-src="{{ image.image.url }}"
+            data-caption="{{ room.room_name }}"
+          >
+            <img
+              class="gallery-image"
+              src="{{ image.image.url }}"
+              alt="{{ room.room_name }}"
+            />
+          </a>
         </div>
       </div>
-      <div class="col-lg-6">
-        <!-- Large gallery item -->
-        <div
-          class="gallery-item large-item set-bg"
-          data-setbg="{{ room.images.last.image.url }}"
-        >
-          <div class="gi-text">
-            <h3>{{ room.room_name }}</h3>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
-
 <!-- Gallery Section End -->
 
+<script>
+  $(document).ready(function () {
+    // Initialize Fancybox
+    $("[data-fancybox]").fancybox({
+      // Options if needed
+    });
+  });
+</script>
 {% endblock %}
