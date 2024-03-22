@@ -1,4 +1,6 @@
 from django.db import models
+from modeltranslation.translator import TranslationOptions, register
+
 
 class CarouselImage(models.Model):
     image = models.ImageField(upload_to='img/%y/%m')

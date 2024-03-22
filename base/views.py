@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import CarouselImage,About,OurService,Room,AboutVideo,Benefit,ExtraService,DadResidenceDetail,GalleryImage
-
+from django.utils.translation import gettext as _
 # Create your views here.
 
 def home(request):
